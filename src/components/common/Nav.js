@@ -6,7 +6,7 @@ function Nav() {
       <nav>
         <article>
           <h1>
-            <Link to="/Home/Home">
+            <Link to="/">
               Northwest <span>Animal Hospital</span>
             </Link>
           </h1>
@@ -14,10 +14,10 @@ function Nav() {
         <aside>
           <ul>
             <li>
-              <Link to="/staff/StaffList">All Staff</Link>
+              <Link to="/staff">All Staff</Link>
             </li>
             <li>
-              <Link to="/pets/PetList">All Pets</Link>
+              <Link to="/pets">All Pets</Link>
             </li>
           </ul>
         </aside>
