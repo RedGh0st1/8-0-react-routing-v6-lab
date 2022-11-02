@@ -28,10 +28,16 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Home employees={employees} owners={owners} pets={pets} />
-          <StaffList employees={employees} />
-          <PetsList pets={pets} />
+          <Route
+            path="/"
+            element={<Home employees={employees} owners={owners} pets={pets} />}
+          />
+          {/* <Home employees={employees} owners={owners} pets={pets} /> */}
+          <Route
+            path="/StaffList"
+            element={<StaffList employees={employees} />}
+          />
+          <Route path="/PetsList" element={<PetsList pets={pets} />} />
         </Routes>
         <Footer />
       </Router>
