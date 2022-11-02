@@ -36,6 +36,7 @@ function App() {
             path="/staff"
             element={<StaffList employees={employees} pets={pets} />}
           />
+          <Route path="/pets" element={<PetsList pets={pets} />} />
           <Route path="/pets/:kind" element={<PetsList pets={pets} />} />
         </Routes>
         <Footer />

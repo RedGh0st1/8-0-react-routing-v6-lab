@@ -1,11 +1,12 @@
 import PetsListNav from "./PetsListNav"
 import Pet from "./Pet"
 import "./PetsList.css"
-import { useParams, useNavigate, Navi, Navigate } from "react-router-dom"
+import { useParams, useNavigate, Navigate } from "react-router-dom"
 import { useEffect } from "react"
 
 export const PetsList = ({ pets }) => {
   const { kind } = useParams()
+  const navigate = useNavigate()
   const [cats, dogs] = pets.reduce(
     (acc, pet) => {
       const position = pet.kind === "Cat" ? 0 : 1
@@ -15,8 +16,9 @@ export const PetsList = ({ pets }) => {
     [[], []]
   )
   useEffect(() => {
-    kind === undefined && Navigate("/pets/cats")
-  })
+    if (kind === undefined) navigate("/pets/cats")
+  }, [kind])
+
   return (
     <section className="pets-wrapper">
       <PetsListNav cats={cats} dogs={dogs} />
