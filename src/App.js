@@ -32,12 +32,8 @@ function App() {
             path="/"
             element={<Home employees={employees} owners={owners} pets={pets} />}
           />
-          {/* <Home employees={employees} owners={owners} pets={pets} /> */}
-          <Route
-            path="/StaffList"
-            element={<StaffList employees={employees} />}
-          />
-          <Route path="/PetsList" element={<PetsList pets={pets} />} />
+          <Route path="/staff" element={<StaffList employees={employees} />} />
+          <Route path="/pets" element={<PetsList pets={pets} />} />
         </Routes>
         <Footer />
       </Router>
